@@ -1,7 +1,12 @@
 import { Component } from 'react';
+import PropTypes from 'prop-types';
 import s from './Filter.module.css';
 
 class Filter extends Component {
+  static propTypes = {
+    filterValue: PropTypes.string,
+    onInputChange: PropTypes.func,
+  };
   render() {
     const { onInputChange, filterValue } = this.props;
 

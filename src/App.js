@@ -77,7 +77,6 @@ class App extends Component {
         />
         <Contacts
           contacts={this.state.contacts}
-          inputHandler={this.onFormChange}
           filteredContacts={filteredContacts}
           removeHandler={this.removeContact}
         />

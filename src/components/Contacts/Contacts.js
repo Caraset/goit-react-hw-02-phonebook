@@ -1,7 +1,15 @@
 import { Component } from 'react';
+import PropTypes from 'prop-types';
+
 import s from './Contacts.module.css';
 
 class Contacts extends Component {
+  static propTypes = {
+    contacts: PropTypes.arrayOf(PropTypes.object),
+    filteredContacts: PropTypes.arrayOf(PropTypes.object),
+    removeHandler: PropTypes.func,
+  };
+
   render() {
     const { contacts, filteredContacts, removeHandler } = this.props;
 
